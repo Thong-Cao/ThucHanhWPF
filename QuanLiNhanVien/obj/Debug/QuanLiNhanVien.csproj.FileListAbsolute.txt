@@ -1,0 +1,16 @@
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.exe.config
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.exe
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.pdb
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.AssemblyReference.cache
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.SuggestedBindingRedirects.cache
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\MainWindow.g.cs
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\App.g.cs
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien_MarkupCompile.cache
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien_MarkupCompile.lref
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\MainWindow.baml
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.g.resources
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.Properties.Resources.resources
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.GenerateResource.cache
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.CoreCompileInputs.cache
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.exe
+D:\UEL\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.pdb

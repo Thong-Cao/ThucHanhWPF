@@ -1,0 +1,90 @@
+﻿<Window x:Class="QuanLiNhanVien.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Closing="Window_Closing"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLiNhanVien"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="582">
+    <Grid Margin="0,0,10,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="135*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Chương trình quản lí Nhân Viên" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24" Grid.ColumnSpan="2"/>
+
+        <GroupBox Header="Thông tin nhân viên" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0" Width="400" FontSize="16" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Labels and Text Boxes for employee information -->
+                <Label Content="Mã NV" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" FontSize="18"/>
+                <TextBox x:Name="txtMaNV" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" FontSize="18"/>
+
+                <Label Content="Họ tên" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontSize="18"/>
+                <TextBox x:Name="txtTen" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="18"/>
+
+                <Label Content="Giới tính" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" FontSize="18"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
+                    <RadioButton x:Name="radNam" Content="Nam" FontSize="18"/>
+                    <RadioButton x:Name="radNu" Content="Nữ" FontSize="18"/>
+                </StackPanel>
+
+                <Label Content="Điện thoại" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" FontSize="18"/>
+                <TextBox x:Name="txtDienThoai" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontSize="18"/>
+
+                <Label Content="Ngày vào làm" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" FontSize="18"/>
+                <DatePicker x:Name="dtpNgayVaoLam" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontSize="18"/>
+
+                <Label Content="Loại NV" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" FontSize="18"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
+                    <RadioButton x:Name="radBanHang" Content="Bán hàng" FontSize="18" Checked="radBanHang_Checked"/>
+                    <RadioButton x:Name="radGiaoNhan" Content="Giao nhận" FontSize="18" Checked="radGiaoNhan_Checked"/>
+                </StackPanel>
+
+                <Label x:Name="labelDoanhSo" Content="Doanh số" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" FontSize="18"/>
+                <TextBox x:Name="txtDoanhSo" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" FontSize="18"/>
+
+                <Label x:Name="labelPCNhienLieu" Content="PC nhiên liệu" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" FontSize="18"/>
+                <TextBox x:Name="txtPCNhienLieu" Grid.Row="6" Grid.Column="1" VerticalAlignment="Top" FontSize="18" Margin="0,6,0,0"/>
+            </Grid>
+        </GroupBox>
+
+        <!-- Buttons for actions -->
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Orientation="Vertical" Margin="0,50,10,0" Grid.Column="1">
+            <Button x:Name="btnThem" Content="Thêm" Width="80" FontSize="18" Click="btnThem_Click"/>
+            <Button x:Name="btnSua" Content="Sửa" Width="80" FontSize="18" Click="btnSua_Click"/>
+            <Button x:Name="btnXoa" Content="Xóa" Width="80" FontSize="18" Click="btnXoa_Click"/>
+            <Button x:Name="btnLuu" Content="Lưu" Width="80" FontSize="18" Click="btnLuu_Click"/>
+            <Button x:Name="btnSapXep" Content="Sắp xếp" Width="80" FontSize="18" Click="btnSapXep_Click"/>
+            <Button x:Name="btnThongKe" Content="Thống kê" Width="80" FontSize="18" Click="btnThongKe_Click"/>
+        </StackPanel>
+
+        <!-- ListView for employee list -->
+        <ListView x:Name="lvDanhSachNhanVien" Margin="10,349,10,50" Grid.ColumnSpan="2" SelectionChanged="lvDanhSachNhanVien_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Mã NV" Width="100" DisplayMemberBinding="{Binding MaNV}"/>
+                    <GridViewColumn Header="Họ tên" Width="150" DisplayMemberBinding="{Binding HoTen}"/>
+                    <GridViewColumn Header="Giới tính" Width="100" DisplayMemberBinding="{Binding GioiTinh}"/>
+                    <GridViewColumn Header="Ngày vào làm" Width="150" DisplayMemberBinding="{Binding NgayVaoLam}"/>
+                    <!-- Add more columns as needed -->
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
