@@ -30,6 +30,4 @@ This is a simple desktop application for managing employee records. It allows yo
 - XAML for the user interface.
 - .NET Framework for Windows desktop application development.
 
-## License
 
-This project is open-source and available under the [MIT License](LICENSE).
